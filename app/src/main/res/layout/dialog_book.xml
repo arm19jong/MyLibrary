@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+
+    >
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/startTest_dialogView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:fillViewport="true" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical" android:layout_width="300dp"
+            android:layout_height="280dp"
+            android:padding="24dp"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/idBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="IDBook"
+
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nameBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="nameBook"
+
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nameWriter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="nameWriter"
+
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/addBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                />
+            <Button
+                android:id="@+id/updateBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update"
+                />
+            <Button
+                android:id="@+id/delBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="del"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
