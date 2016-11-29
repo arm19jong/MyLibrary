@@ -13,13 +13,14 @@ import com.teamsmokeweed.mylibrary.book.ShowBookActivity;
 public class MainActivity extends AppCompatActivity {
 
     Button bMember, bAdmin, bBook;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Intent i = getIntent();
         String fullName = i.getStringExtra("fullName");
-        Toast.makeText(MainActivity.this, "Hi: "+fullName, Toast.LENGTH_SHORT).show();
+        Toast.makeText(MainActivity.this, "Hi: " + fullName, Toast.LENGTH_SHORT).show();
 
         bMember = (Button) findViewById(R.id.bMember);
         bMember.setOnClickListener(new View.OnClickListener() {

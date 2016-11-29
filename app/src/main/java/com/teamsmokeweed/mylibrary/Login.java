@@ -15,30 +15,26 @@ import com.teamsmokeweed.mylibrary.DatabaseMyLibrary.DBCheck;
  */
 
 public class Login extends AppCompatActivity {
-
     Button bLogin;
     EditText username, password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
-
         bLogin = (Button) findViewById(R.id.bLogin);
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
-
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DBCheck dbCheck = new DBCheck(Login.this);
-                String sUsername= username.getText().toString();
-                String sPassword= password.getText().toString();
-                if(dbCheck.IsAdmin(sUsername, sPassword)){
+                String sUsername = username.getText().toString();
+                String sPassword = password.getText().toString();
+                if (dbCheck.IsAdmin(sUsername, sPassword)) {
                     Intent i = new Intent(Login.this, MainActivity.class);
-                    i.putExtra("fullName", dbCheck.Who(dbCheck.getIdPersonAdmin(sUsername, sPassword)) );
+                    i.putExtra("fullName", dbCheck.Who(dbCheck.getIdPersonAdmin(sUsername, sPassword)));
                     startActivity(i);
-                }
-                else {
+                } else {
                     Toast.makeText(Login.this, "Username or password is wrong", Toast.LENGTH_SHORT).show();
                 }
             }

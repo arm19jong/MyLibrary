@@ -39,6 +39,7 @@ public class Splash extends AppCompatActivity {
             }
         };
     }
+
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
@@ -49,7 +50,8 @@ public class Splash extends AppCompatActivity {
                             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);}
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        }
     }
 
     public void onResume() {
@@ -64,6 +66,4 @@ public class Splash extends AppCompatActivity {
         handler.removeCallbacks(runnable);
         time = delay_time - (System.currentTimeMillis() - time);
     }
-
-
 }

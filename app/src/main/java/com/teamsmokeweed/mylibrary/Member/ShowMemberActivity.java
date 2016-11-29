@@ -28,6 +28,7 @@ public class ShowMemberActivity extends AppCompatActivity {
     private FloatingActionButton fabAdd;
     SwipeRefreshLayout swipeRefreshLayout;
     int type;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +40,7 @@ public class ShowMemberActivity extends AppCompatActivity {
         // Refresh Initialisation And Setter Methods.
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);//Initialising
         //Setting Up OnRefresh Listener
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 //onRefresh method is used to perform all the action
@@ -68,7 +69,6 @@ public class ShowMemberActivity extends AppCompatActivity {
         initializeRecyclerView();
 
 
-
         fabAdd = (FloatingActionButton) findViewById(R.id.fabAdd);
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,23 +87,19 @@ public class ShowMemberActivity extends AppCompatActivity {
                 final EditText username = (EditText) dialog.findViewById(R.id.username);
                 final EditText password = (EditText) dialog.findViewById(R.id.password);
 
-                if(type == 0) {
+                if (type == 0) {
                     username.setVisibility(View.GONE);
                     password.setVisibility(View.GONE);
                 }
-                Button addMember = (Button)dialog.findViewById(R.id.addMember);
+                Button addMember = (Button) dialog.findViewById(R.id.addMember);
                 addMember.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
-//                        Toast.makeText(ShowMemberActivity.this
-//                                , name.getText().toString(), Toast.LENGTH_SHORT);
-//                        surname.setText(name.getText().toString());
 
-                        //dialog.cancel();
                         new DBCheck(ShowMemberActivity.this).AddMember(idPerson.getText().toString(),
                                 name.getText().toString(), lastName.getText().toString(),
                                 tel.getText().toString(), type
                         );
-                        if(type == 1){
+                        if (type == 1) {
                             new DBCheck(ShowMemberActivity.this).AddUsernamePassword(idPerson.getText().toString(),
                                     username.getText().toString(), password.getText().toString());
                         }
@@ -120,7 +116,8 @@ public class ShowMemberActivity extends AppCompatActivity {
             }
         });
     }
-    public void initializeRecyclerView(){
+
+    public void initializeRecyclerView() {
         List<ArrayList<String>> member = new ArrayList<>();
 //    Type 0-> Member
 //         1-> Admin
@@ -159,7 +156,7 @@ public class ShowMemberActivity extends AppCompatActivity {
 
                 idPerson.setEnabled(false);
 
-                Button addMember = (Button)dialog.findViewById(R.id.addMember);
+                Button addMember = (Button) dialog.findViewById(R.id.addMember);
                 addMember.setVisibility(View.GONE);
 
                 Button updateMember = (Button) dialog.findViewById(R.id.updateMember);
@@ -181,14 +178,11 @@ public class ShowMemberActivity extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
-
-
-
                 dialog.show();
 
             }
         });
-        if(swipeRefreshLayout.isRefreshing())
+        if (swipeRefreshLayout.isRefreshing())
             swipeRefreshLayout.setRefreshing(false);
     }
 }

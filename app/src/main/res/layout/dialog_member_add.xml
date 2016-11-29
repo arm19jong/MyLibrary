@@ -6,122 +6,124 @@
     android:background="#fff"
 
     >
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
 
-    android:id="@+id/startTest_dialogView"
-    android:layout_width="match_parent"
-    android:layout_height="280dp"
-    android:fillViewport="true" >
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="300dp"
-    android:layout_height="280dp"
-    android:padding="24dp"
-    >
-
-    <android.support.design.widget.TextInputLayout
+        android:id="@+id/startTest_dialogView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="280dp"
+        android:fillViewport="true">
 
-        <EditText
-            android:id="@+id/idPerson"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="ID"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="300dp"
+            android:layout_height="280dp"
+            android:padding="24dp">
 
-            android:maxLines="1" />
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/idPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ID"
 
-        <EditText
-            android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="name"
+                    android:maxLines="1" />
 
-            android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="name"
 
-        <EditText
-            android:id="@+id/lastName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="lastname"
+                    android:maxLines="1" />
 
-            android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
 
-    </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/lastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="lastname"
 
-        <EditText
-            android:id="@+id/tel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="tel"
+                    android:maxLines="1" />
 
-            android:maxLines="1" />
+            </android.support.design.widget.TextInputLayout>
 
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="username"
+                <EditText
+                    android:id="@+id/tel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="tel"
 
-            android:maxLines="1" />
+                    android:maxLines="1" />
 
-    </android.support.design.widget.TextInputLayout>
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="password"
-            android:inputType="textPassword"
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            android:maxLines="1" />
+                <EditText
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="username"
 
-    </android.support.design.widget.TextInputLayout>
+                    android:maxLines="1" />
 
-    <Button
-        android:id="@+id/addMember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        />
-    <Button
-        android:id="@+id/updateMember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="update"
-        />
-    <Button
-        android:id="@+id/delMember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="del"
-        />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="password"
+                    android:inputType="textPassword"
+
+                    android:maxLines="1" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/addMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add" />
+
+            <Button
+                android:id="@+id/updateMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="update" />
+
+            <Button
+                android:id="@+id/delMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="del" />
 
 
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
-</ScrollView>
-    </LinearLayout>

@@ -15,22 +15,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+
     <Button
         android:id="@+id/bMember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="member"
-        />
+        android:text="member" />
+
     <Button
         android:id="@+id/bAdmin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="เจ้าหน้าที่"
-        />
+        android:text="เจ้าหน้าที่" />
+
     <Button
         android:id="@+id/bBook"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book"
-        />
+        android:text="Book" />
 </LinearLayout>

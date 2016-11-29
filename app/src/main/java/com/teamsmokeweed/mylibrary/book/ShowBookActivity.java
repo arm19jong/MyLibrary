@@ -28,18 +28,16 @@ import java.util.List;
 public class ShowBookActivity extends AppCompatActivity {
     private FloatingActionButton fabAdd;
     SwipeRefreshLayout swipeRefreshLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.showmember);
-//        Intent i = getIntent();
-//        final int type = i.getIntExtra("type", 0);
-
         //From Here Starts All The Swipe To
         // Refresh Initialisation And Setter Methods.
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);//Initialising
         //Setting Up OnRefresh Listener
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener(){
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
                 //onRefresh method is used to perform all the action
@@ -67,7 +65,6 @@ public class ShowBookActivity extends AppCompatActivity {
 
         initializeRecyclerView();
 
-
         fabAdd = (FloatingActionButton) findViewById(R.id.fabAdd);
         fabAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,14 +80,13 @@ public class ShowBookActivity extends AppCompatActivity {
                 final EditText nameWriter = (EditText) dialog.findViewById(R.id.nameWriter);
 
 
-                Button addBook = (Button)dialog.findViewById(R.id.addBook);
+                Button addBook = (Button) dialog.findViewById(R.id.addBook);
                 addBook.setOnClickListener(new View.OnClickListener() {
                     public void onClick(View v) {
 //                        Toast.makeText(ShowMemberActivity.this
 //                                , name.getText().toString(), Toast.LENGTH_SHORT);
 //                        surname.setText(name.getText().toString());
 
-                        //dialog.cancel();
                         new DBCheck(ShowBookActivity.this).AddBook(idBook.getText().toString(),
                                 nameBook.getText().toString(), nameWriter.getText().toString()
                         );
@@ -108,7 +104,7 @@ public class ShowBookActivity extends AppCompatActivity {
         });
     }
 
-    public void initializeRecyclerView(){
+    public void initializeRecyclerView() {
 
         List<ArrayList<String>> book = new ArrayList<>();
 //    Type 0-> Member
@@ -142,7 +138,7 @@ public class ShowBookActivity extends AppCompatActivity {
 
                 idBook.setEnabled(false);
 
-                Button addBook = (Button)dialog.findViewById(R.id.addBook);
+                Button addBook = (Button) dialog.findViewById(R.id.addBook);
                 addBook.setVisibility(View.GONE);
 
                 Button updateMember = (Button) dialog.findViewById(R.id.updateBook);
@@ -164,14 +160,10 @@ public class ShowBookActivity extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
-
-
-
                 dialog.show();
-
             }
         });
-        if(swipeRefreshLayout.isRefreshing())
+        if (swipeRefreshLayout.isRefreshing())
             swipeRefreshLayout.setRefreshing(false);
     }
 }

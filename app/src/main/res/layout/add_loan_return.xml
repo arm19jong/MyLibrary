@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/radio_loan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ยืม"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:id="@+id/radio_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="คืน"
+            android:onClick="onRadioButtonClicked" />
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IDBook"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idPerson"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IDPerson"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/idAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IDAdmin"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/bSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+</LinearLayout>

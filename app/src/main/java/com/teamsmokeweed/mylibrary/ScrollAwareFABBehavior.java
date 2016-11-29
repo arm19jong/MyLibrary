@@ -33,6 +33,7 @@ public class ScrollAwareFABBehavior extends FloatingActionButton.Behavior {
             child.show();
         }
     }
+
     public ScrollAwareFABBehavior(Context context, AttributeSet attrs) {
         super();
     }

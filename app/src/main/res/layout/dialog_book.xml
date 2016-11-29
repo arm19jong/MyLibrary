@@ -6,19 +6,19 @@
     android:background="#fff"
 
     >
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 
         android:id="@+id/startTest_dialogView"
         android:layout_width="match_parent"
         android:layout_height="280dp"
-        android:fillViewport="true" >
+        android:fillViewport="true">
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical" android:layout_width="300dp"
+            android:orientation="vertical"
+            android:layout_width="300dp"
             android:layout_height="280dp"
-            android:padding="24dp"
-            >
+            android:padding="24dp">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -33,6 +33,7 @@
                     android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
+
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -65,20 +66,19 @@
                 android:id="@+id/addBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add"
-                />
+                android:text="Add" />
+
             <Button
                 android:id="@+id/updateBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="update"
-                />
+                android:text="update" />
+
             <Button
                 android:id="@+id/delBook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="del"
-                />
+                android:text="del" />
 
 
         </LinearLayout>
